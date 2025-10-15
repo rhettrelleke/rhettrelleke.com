@@ -12,7 +12,23 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   if (!post) return { title: 'Not found' }
   return {
     title: post.meta.title,
-    description: post.meta.summary
+    description: post.meta.summary,
+    openGraph: {
+      title: post.meta.title,
+      description: post.meta.summary,
+      url: `https://rhettrelleke.com/blog/${post.meta.slug}`,
+      type: 'article',
+      images: post.meta.image ? [{ url: post.meta.image }] : [{ url: '/og.png' }]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.meta.title,
+      description: post.meta.summary,
+      images: [post.meta.image ?? '/og.png']
+    },
+    alternates: {
+      canonical: `https://rhettrelleke.com/blog/${post.meta.slug}`
+    }
   }
 }
 

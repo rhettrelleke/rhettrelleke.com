@@ -8,7 +8,10 @@ import path from 'path'
 import matter from 'gray-matter'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import Callout from '@/components/mdx/Callout'
+import YouTube from '@/components/mdx/YouTube'
+import SpotifyTrack from '@/components/mdx/SpotifyTrack'
 import remarkGfm from 'remark-gfm'
+import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
@@ -19,6 +22,7 @@ export type PostMeta = {
   summary?: string
   tags?: string[]
   published?: boolean
+  image?: string
 }
 
 export const CONTENT_DIR = path.join(process.cwd(), 'src', 'content', 'blog')
@@ -47,7 +51,8 @@ export function getAllPostsMeta(): PostMeta[] {
         date: data.date ?? new Date().toISOString(),
         summary: data.summary ?? '',
         tags: Array.isArray(data.tags) ? data.tags : [],
-        published: data.published !== false
+        published: data.published !== false,
+        image: data.image
       }
       return meta
     })
@@ -74,10 +79,14 @@ export async function getPostBySlug(slug: string) {
       mdxOptions: {
         // Cast plugin arrays to avoid type mismatches between unified/vfile versions on CI
         remarkPlugins: [remarkGfm] as any,
-        rehypePlugins: [rehypeSlug as any, [rehypeAutolinkHeadings as any, { behavior: 'wrap' }]] as any
+        rehypePlugins: [
+          rehypeSlug as any,
+          [rehypeAutolinkHeadings as any, { behavior: 'wrap' }],
+          [rehypePrettyCode as any, { theme: 'github-light' }]
+        ] as any
       } as any
     },
-    components: { Callout }
+    components: { Callout, YouTube, SpotifyTrack }
   })
 
   return {
@@ -88,7 +97,8 @@ export async function getPostBySlug(slug: string) {
       date: (data as any).date ?? new Date().toISOString(),
       summary: (data as any).summary ?? '',
       tags: Array.isArray((data as any).tags) ? (data as any).tags : [],
-      published: (data as any).published !== false
+      published: (data as any).published !== false,
+      image: (data as any).image
     } as PostMeta,
     content: mdx.content
   }
