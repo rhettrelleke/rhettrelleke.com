@@ -14,9 +14,9 @@ const navItems: { href: string; label: string }[] = [
 
 export default function Navbar() {
   return (
-    <header className="border-b border-neutral-200">
+    <header className="border-b" style={{ borderColor: 'var(--color-border)' }}>
       <nav className="container-page flex h-16 items-center justify-between">
-        <Link href="/" className="font-semibold tracking-tight">
+        <Link href="/" className="font-semibold tracking-tight hover-gradient-text">
           Rhett Relleke
         </Link>
         <ul className="flex items-center gap-5 text-sm">
@@ -24,9 +24,7 @@ export default function Navbar() {
             <li key={item.href}>
               <Link
                 href={item.href}
-                className={clsx(
-                  'transition-colors hover:text-accent'
-                )}
+                className={clsx('transition-colors hover-gradient-text')}
               >
                 {item.label}
               </Link>

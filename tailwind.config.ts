@@ -12,7 +12,10 @@ const config: Config = {
       colors: {
         background: 'var(--color-background)',
         foreground: 'var(--color-foreground)',
-        accent: 'var(--color-accent)'
+        accent: 'var(--color-accent)',
+        accent2: 'var(--color-accent-2)',
+        muted: 'var(--color-muted)',
+        border: 'var(--color-border)'
       }
     }
   },

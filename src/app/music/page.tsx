@@ -1,8 +1,8 @@
 export default function MusicPage() {
   return (
     <section className="section">
-      <h1 className="text-2xl font-semibold tracking-tight">Music</h1>
-      <p className="mt-2 max-w-2xl text-neutral-700">
+      <h1 className="text-2xl font-semibold tracking-tight hover-gradient-text">Music</h1>
+      <p className="mt-2 max-w-2xl muted">
         I release music as Frizzlord and Dorm Mold.
       </p>
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
