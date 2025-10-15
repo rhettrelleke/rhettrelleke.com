@@ -72,9 +72,10 @@ export async function getPostBySlug(slug: string) {
     options: {
       parseFrontmatter: false,
       mdxOptions: {
-        remarkPlugins: [remarkGfm],
-        rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'wrap' }]]
-      }
+        // Cast plugin arrays to avoid type mismatches between unified/vfile versions on CI
+        remarkPlugins: [remarkGfm] as any,
+        rehypePlugins: [rehypeSlug as any, [rehypeAutolinkHeadings as any, { behavior: 'wrap' }]] as any
+      } as any
     },
     components: { Callout }
   })
