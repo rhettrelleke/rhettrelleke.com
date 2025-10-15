@@ -11,18 +11,11 @@ const projects = [
     tech: 'Flutter, Dart, Firebase'
   },
   {
-    title: 'Frizzlord / Dorm Mold',
+    title: 'frizzlord',
     description: 'Original music & experimental sound.',
-    href: 'https://open.spotify.com',
+    href: 'https://open.spotify.com/artist/48Hp0a20sZcBvzrDwDNi6S',
     bullets: ['Songs, production, mixing', 'Exploring texture-first writing'],
     tech: 'Mixcraft, FabFilter, assorted guitars'
-  },
-  {
-    title: '8 Queen Fitness',
-    description: 'Python AI fitness challenge.',
-    href: 'https://github.com',
-    bullets: ['Algorithmic challenge around queen placements', 'Metrics and iteration'],
-    tech: 'Python'
   },
   {
     title: 'Blog',
