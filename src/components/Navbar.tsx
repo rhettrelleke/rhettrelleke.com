@@ -21,8 +21,8 @@ export default function Navbar() {
             Rhett Relleke
           </Link>
         </div>
-        <div className="justify-self-center">
-          <ul className="flex items-center gap-3 md:gap-5 text-sm">
+        <div className="justify-self-center pr-12 md:pr-0 overflow-x-auto no-scrollbar">
+          <ul className="flex items-center gap-3 md:gap-5 text-sm whitespace-nowrap">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
