@@ -8,6 +8,13 @@
   --color-accent: #2f6df6; /* subtle blue */
 }
 
+/* Dark theme variables */
+.dark {
+  --color-background: #0b0b0b;
+  --color-foreground: #e6e6e6;
+  --color-accent: #6ea8ff;
+}
+
 html, body, #__next {
   height: 100%;
 }

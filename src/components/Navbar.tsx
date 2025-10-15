@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import clsx from 'clsx'
+import ThemeToggle from './ThemeToggle'
 
 const navItems: { href: string; label: string }[] = [
   { href: '/', label: 'Home' },
@@ -31,6 +32,9 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          <li>
+            <ThemeToggle />
+          </li>
         </ul>
       </nav>
     </header>
