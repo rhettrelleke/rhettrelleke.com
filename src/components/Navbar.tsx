@@ -35,7 +35,7 @@ export default function Navbar() {
             ))}
           </ul>
         </div>
-        <div className="justify-self-end">
+        <div className="justify-self-end hidden md:block">
           <ThemeToggle />
         </div>
       </nav>

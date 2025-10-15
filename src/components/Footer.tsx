@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ThemeToggle from './ThemeToggle'
 
 export default function Footer() {
   return (
@@ -9,6 +10,9 @@ export default function Footer() {
           <Link className="hover:text-accent" href="/now">/now</Link>
           <Link className="hover:text-accent" href="/privacy">Privacy</Link>
           <a className="hover:text-accent" href="mailto:hello@rhettrelleke.com">hello@rhettrelleke.com</a>
+        </div>
+        <div className="md:hidden mt-2">
+          <ThemeToggle />
         </div>
       </div>
     </footer>
