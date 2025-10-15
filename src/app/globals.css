@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #faf9f7; /* off-white */
+  --color-foreground: #111111; /* near-black */
+  --color-accent: #2f6df6; /* subtle blue */
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+.container-page {
+  @apply mx-auto max-w-4xl px-6;
+}
+
+.section {
+  @apply py-16;
+}
+
+.muted {
+  @apply text-neutral-600;
+}
+
+

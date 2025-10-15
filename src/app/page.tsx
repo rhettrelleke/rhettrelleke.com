@@ -1,0 +1,42 @@
+export default function HomePage() {
+  return (
+    <>
+      <section className="section">
+        <h1 className="text-3xl font-semibold tracking-tight">I build tools, make noise, and chase ideas.</h1>
+        <p className="mt-4 max-w-2xl text-lg text-neutral-700">
+          Solo app developer, musician, and explorer of ideas.
+        </p>
+        <div className="mt-6">
+          <a
+            href="/projects"
+            className="inline-flex items-center rounded-md bg-accent px-4 py-2 text-white shadow-sm transition-colors hover:opacity-90"
+          >
+            View My Work
+          </a>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="grid gap-6 md:grid-cols-3">
+          <div className="rounded-lg border border-neutral-200 p-6">
+            <h3 className="font-medium">GuitarGuide</h3>
+            <p className="muted mt-2">Interactive guitar learning app.</p>
+            <a className="mt-4 inline-block text-accent hover:underline" href="https://guitarguide.app" target="_blank">guitarguide.app</a>
+          </div>
+          <div className="rounded-lg border border-neutral-200 p-6">
+            <h3 className="font-medium">Frizzlord / Dorm Mold</h3>
+            <p className="muted mt-2">Original music, production, and songwriting.</p>
+            <a className="mt-4 inline-block text-accent hover:underline" href="https://open.spotify.com" target="_blank">Spotify</a>
+          </div>
+          <div className="rounded-lg border border-neutral-200 p-6">
+            <h3 className="font-medium">Blog</h3>
+            <p className="muted mt-2">Notes on building, music, and life experiments.</p>
+            <a className="mt-4 inline-block text-accent hover:underline" href="/blog">Read the blog →</a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
+
+
