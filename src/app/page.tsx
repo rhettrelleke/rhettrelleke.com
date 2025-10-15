@@ -6,7 +6,7 @@ export default function HomePage() {
         <p className="mt-4 max-w-2xl text-lg muted">
           Solo app developer, musician, and explorer of ideas.
         </p>
-        <div className="mt-6">
+        <div className="mt-6 cta">
           <a
             href="/projects"
             className="inline-flex items-center rounded-md px-4 py-2 text-white shadow-sm transition-opacity hover:opacity-90 accent-gradient focus:shadow-[0_0_0_6px_rgba(99,102,241,0.15)] hover:shadow-[0_10px_30px_-10px_rgba(59,130,246,0.25)]"

@@ -49,6 +49,17 @@ body {
   @apply py-12 md:py-16;
 }
 
+/* Center hero text on desktop */
+@media (min-width: 768px) {
+  .section:first-of-type h1,
+  .section:first-of-type p,
+  .section:first-of-type .cta {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
 .muted {
   color: var(--color-muted);
 }

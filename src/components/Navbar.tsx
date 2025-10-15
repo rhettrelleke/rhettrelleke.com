@@ -15,25 +15,29 @@ const navItems: { href: string; label: string }[] = [
 export default function Navbar() {
   return (
     <header className="border-b" style={{ borderColor: 'var(--color-border)' }}>
-      <nav className="container-page flex h-16 items-center justify-between">
-        <Link href="/" className="hidden md:inline-block font-semibold tracking-tight hover-gradient-text">
-          Rhett Relleke
-        </Link>
-        <ul className="flex items-center gap-3 md:gap-5 text-sm">
-          {navItems.map((item) => (
-            <li key={item.href}>
-              <Link
-                href={item.href}
-                className={clsx('transition-colors hover-gradient-text')}
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-          <li>
-            <ThemeToggle />
-          </li>
-        </ul>
+      <nav className="container-page grid h-16 grid-cols-3 items-center">
+        <div>
+          <Link href="/" className="hidden md:inline-block font-semibold tracking-tight hover-gradient-text">
+            Rhett Relleke
+          </Link>
+        </div>
+        <div className="justify-self-center">
+          <ul className="flex items-center gap-3 md:gap-5 text-sm">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={clsx('transition-colors hover-gradient-text')}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="justify-self-end">
+          <ThemeToggle />
+        </div>
       </nav>
     </header>
   )
