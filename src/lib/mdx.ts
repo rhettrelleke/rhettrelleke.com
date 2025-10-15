@@ -70,13 +70,13 @@ export async function getPostBySlug(slug: string) {
   const mdx = await compileMDX<{ title: string; date: string; summary?: string; tags?: string[]; published?: boolean }>({
     source: content,
     options: {
-      parseFrontmatter: false
+      parseFrontmatter: false,
+      mdxOptions: {
+        remarkPlugins: [remarkGfm],
+        rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'wrap' }]]
+      }
     },
-    components: { Callout },
-    mdxOptions: {
-      remarkPlugins: [remarkGfm],
-      rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'wrap' }]]
-    }
+    components: { Callout }
   })
 
   return {
