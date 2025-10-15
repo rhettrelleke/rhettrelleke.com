@@ -9,7 +9,7 @@ export default function HomePage() {
         <div className="mt-6">
           <a
             href="/projects"
-            className="inline-flex items-center rounded-md px-4 py-2 text-white shadow-sm transition-opacity hover:opacity-90 accent-gradient"
+            className="inline-flex items-center rounded-md px-4 py-2 text-white shadow-sm transition-opacity hover:opacity-90 accent-gradient focus:shadow-[0_0_0_6px_rgba(99,102,241,0.15)] hover:shadow-[0_10px_30px_-10px_rgba(59,130,246,0.25)]"
           >
             View My Work
           </a>
@@ -33,6 +33,20 @@ export default function HomePage() {
             <p className="muted mt-2">Notes on building, music, and life experiments.</p>
             <a className="mt-4 inline-block text-accent hover:underline" href="/blog">Read the blog →</a>
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="flex flex-wrap items-center gap-3">
+          <a href="/projects" className="rounded-full border px-3 py-1 text-sm hover-gradient-text" style={{ borderColor: 'var(--color-border)' }}>
+            🎸 GuitarGuide
+          </a>
+          <a href="/music" className="rounded-full border px-3 py-1 text-sm hover-gradient-text" style={{ borderColor: 'var(--color-border)' }}>
+            🎵 Frizzlord
+          </a>
+          <a href="/blog" className="rounded-full border px-3 py-1 text-sm hover-gradient-text" style={{ borderColor: 'var(--color-border)' }}>
+            📝 Blog
+          </a>
         </div>
       </section>
     </>
