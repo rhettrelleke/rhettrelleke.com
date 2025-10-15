@@ -2,7 +2,7 @@ export default function HomePage() {
   return (
     <>
       <section className="section">
-        <h1 className="text-3xl font-semibold tracking-tight hover-gradient-text">I like to build things, make noise, and chase ideas.</h1>
+        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight hover-gradient-text">I like to build things, make noise, and chase ideas.</h1>
         <p className="mt-4 max-w-2xl text-lg muted">
           Solo app developer, musician, and explorer of ideas.
         </p>

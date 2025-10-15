@@ -16,10 +16,10 @@ export default function Navbar() {
   return (
     <header className="border-b" style={{ borderColor: 'var(--color-border)' }}>
       <nav className="container-page flex h-16 items-center justify-between">
-        <Link href="/" className="font-semibold tracking-tight hover-gradient-text">
+        <Link href="/" className="hidden md:inline-block font-semibold tracking-tight hover-gradient-text">
           Rhett Relleke
         </Link>
-        <ul className="flex items-center gap-5 text-sm">
+        <ul className="flex items-center gap-3 md:gap-5 text-sm">
           {navItems.map((item) => (
             <li key={item.href}>
               <Link
