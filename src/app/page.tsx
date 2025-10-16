@@ -4,7 +4,7 @@ export default function HomePage() {
       <section className="section hero">
         <h1 className="text-3xl md:text-4xl font-semibold tracking-tight hover-gradient-text">Getting obsessed with everything</h1>
         <p className="mt-4 max-w-2xl text-lg muted">
-          Solo app development, music making, going <span className="heading-accent">FAST</span>, and learning.
+          Solo app development, music making, going <span className="heading-accent"><em>fast</em></span>, and learning.
         </p>
         <div className="mt-6 cta">
           <a

@@ -40,7 +40,7 @@ export default async function BlogPostPage({ params }: Params) {
     <article className="section">
       <h1 className="text-3xl font-semibold tracking-tight hover-gradient-text">{post.meta.title}</h1>
       <p className="mt-2 text-sm muted">{new Date(post.meta.date).toLocaleDateString()}</p>
-      <div className="mt-8 prose prose-neutral max-w-none">
+      <div className="mt-8 prose prose-neutral prose-lg md:prose-xl max-w-none">
         {post.content}
       </div>
     </article>

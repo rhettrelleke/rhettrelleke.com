@@ -1,16 +1,29 @@
 export default function AboutPage() {
   return (
     <section className="section">
-      <h1 className="text-2xl font-semibold tracking-tight hover-gradient-text">About</h1>
+      <h1 className="text-3xl font-semibold tracking-tight hover-gradient-text">About</h1>
       <div className="mt-6 grid items-start gap-8 md:grid-cols-[1fr,280px]">
         <div>
           <p className="mt-2 max-w-2xl muted">
-            I grew up close to the land and learned to value focus, patience, and hard work. Today I channel that into building
-            useful tools and making music — keeping things practical, honest, and a little weird.
+            Growing up on a farm near St. Louis, Missouri, I developed a degree of introversion and a love for plants. 
+            <br />
+            <br />
+            When I was 13, I built my first computer and started messing around with programming various things. I've been hooked ever since.
+            <br />
+            <br />
+            When I was 16, I got my first acoustic guitar and started playing around with it. I've been hooked ever since.
           </p>
+          <br></br>
+          <h1 className="text-1xl font-semibold tracking-tight hover-gradient-text">My Principles</h1>
           <p className="mt-4 max-w-2xl muted">
-            My principles: curiosity (keep learning), craftsmanship (sweat the details), and autonomy (own the work). I’m most
-            alive when I’m shipping, improving, and sharing what I learn along the way.
+            I have a constant curiosity about the world, this curiosity fuels my desire to keep learning and improving myself, a concept known to the Japanese as <a className="link-accent" href="https://en.wikipedia.org/wiki/Kaizen" target="_blank" rel="noopener noreferrer">Kaizen</a>
+            . 
+            <br></br>
+            <br></br>
+            Say what you will about astrology, but I myself am a Virgo, meaning I was blessed (<b>and cursed</b>) with an obsessive <a className="link-accent" href="https://en.wikipedia.org/wiki/Perfectionism_(psychology)" target="_blank" rel="noopener noreferrer">perfectionism</a>, which has its pros and cons.
+            <br></br>
+            <br></br>
+            I’m most alive when I’m creating something, whether it be music, apps, plants, you get it.
           </p>
         </div>
         <div className="justify-self-end">
@@ -19,19 +32,19 @@ export default function AboutPage() {
       </div>
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         <div>
-          <h2 className="font-medium">What I Value</h2>
+          <h2 className="font-medium">Personality Traits</h2>
           <ul className="mt-2 list-disc pl-5 muted">
-            <li>Curiosity</li>
-            <li>Craftsmanship</li>
-            <li>Autonomy</li>
+            <li>Creativity</li>
+            <li>Self Improvement</li>
+            <li>Independence</li>
           </ul>
         </div>
         <div>
           <h2 className="font-medium">My Tools</h2>
           <ul className="mt-2 list-disc pl-5 muted">
             <li>Flutter / Dart</li>
-            <li>Python</li>
-            <li>Music production tools</li>
+            <li>Next.js</li>
+            <li>Mixcraft</li>
           </ul>
         </div>
       </div>
