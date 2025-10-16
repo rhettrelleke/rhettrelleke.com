@@ -6,20 +6,28 @@ export default function NowPage() {
 
       <div className="mt-8 grid gap-6 md:grid-cols-2">
         <div>
-          <h2 className="font-medium">Currently</h2>
+          <h2 className="font-medium accent-outline">Currently</h2>
           <ul className="mt-2 list-disc pl-5 muted">
-            <li>Finishing GuitarGuide MVP</li>
-            <li>Recording new track</li>
-            <li>Reading something interesting</li>
+            <li>Finishing GuitarGuide version 1.0</li>
+            <li>Working on my personal website :)</li>
+            <li>Experimenting with different half-caff coffee recipes</li>
           </ul>
         </div>
         <div>
-          <h2 className="font-medium">Next up</h2>
+          <h2 className="font-medium accent-outline">Next up <span className="dots"><span></span><span></span><span></span></span></h2>
           <ul className="mt-2 list-disc pl-5 muted">
-            <li>Prep for festival set</li>
-            <li>Launch beta</li>
+            <li>Launch GuitarGuide closed beta</li>
           </ul>
         </div>
+      </div>
+
+      <div className="mt-10">
+        <h2 className="font-medium accent-outline">What I’m reading</h2>
+        <ul className="mt-2 list-disc pl-5 muted">
+          <li>
+            <a> Life in Code: A Personal History of Technology by Ellen Ullman</a>
+          </li>
+        </ul>
       </div>
 
       <p className="mt-10 text-sm muted">
