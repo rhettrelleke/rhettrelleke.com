@@ -1,10 +1,10 @@
 export default function HomePage() {
   return (
     <>
-      <section className="section">
+      <section className="section hero">
         <h1 className="text-3xl md:text-4xl font-semibold tracking-tight hover-gradient-text">Getting obsessed with everything</h1>
         <p className="mt-4 max-w-2xl text-lg muted">
-          Solo app development, music making, <span className="heading-accent">going fast</span>, and learning.
+          Solo app development, music making, going <span className="heading-accent">FAST</span>, and learning.
         </p>
         <div className="mt-6 cta">
           <a
@@ -24,9 +24,9 @@ export default function HomePage() {
             <a className="mt-4 inline-block text-accent hover:underline" href="https://guitarguide.app" target="_blank">guitarguide.app</a>
           </div>
           <div className="rounded-lg border p-6" style={{ borderColor: 'var(--color-border)' }}>
-            <h3 className="font-medium">Frizzlord / Dorm Mold</h3>
+            <h3 className="font-medium">Frizzlord</h3>
             <p className="muted mt-2">Original music, production, and songwriting.</p>
-            <a className="mt-4 inline-block text-accent hover:underline" href="https://open.spotify.com" target="_blank">Spotify</a>
+            <a className="mt-4 inline-block text-accent hover:underline" href="https://open.spotify.com/artist/48Hp0a20sZcBvzrDwDNi6S?si=tSYzCS0sTpiP7cpjyX66fQ" target="_blank">Spotify</a>
           </div>
           <div className="rounded-lg border p-6" style={{ borderColor: 'var(--color-border)' }}>
             <h3 className="font-medium">Blog</h3>

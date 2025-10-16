@@ -3,6 +3,7 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import ThemeProvider from '@/components/ThemeProvider'
 import Footer from '@/components/Footer'
+import AmbientRays from '@/components/AmbientRays'
 
 export const metadata: Metadata = {
   title: 'Rhett Relleke',
@@ -34,8 +35,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider>
+          <AmbientRays />
           <Navbar />
-          <main className="container-page">{children}</main>
+          <main className="container-page" style={{ position: 'relative', zIndex: 1 }}>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

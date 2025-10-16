@@ -957,6 +957,12 @@ video {
   --tw-prose-invert-th-borders: #525252;
   --tw-prose-invert-td-borders: #404040;
 }
+.fixed {
+  position: fixed;
+}
+.relative {
+  position: relative;
+}
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -1030,6 +1036,9 @@ video {
 .max-w-none {
   max-width: none;
 }
+.resize {
+  resize: both;
+}
 .list-disc {
   list-style-type: disc;
 }
@@ -1038,9 +1047,6 @@ video {
 }
 .flex-col {
   flex-direction: column;
-}
-.flex-wrap {
-  flex-wrap: wrap;
 }
 .items-start {
   align-items: flex-start;
@@ -1150,10 +1156,6 @@ video {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1222,6 +1224,11 @@ video {
 .opacity-70 {
   opacity: 0.7;
 }
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
@@ -1282,23 +1289,49 @@ body {
 
 .prose code {
   border-radius: 0.25rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
   padding-left: 0.25rem;
   padding-right: 0.25rem;
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
   font-size: 0.95em;
+  background-color: color-mix(in oklab, var(--color-foreground) 6%, transparent);
 }
 
 .prose pre {
   border-radius: 0.5rem;
   border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(229 229 229 / var(--tw-border-opacity, 1));
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1));
   padding: 1rem;
+  border-color: var(--color-border);
+  background-color: color-mix(in oklab, var(--color-background) 85%, var(--color-foreground) 1%);
+}
+
+/* Better dark-mode paragraph contrast in posts */
+.prose p {
+  color: color-mix(in oklab, var(--color-foreground) 92%, var(--color-background) 8%);
+}
+.dark .prose p {
+  color: color-mix(in oklab, var(--color-foreground) 96%, var(--color-background) 4%);
+}
+
+/* Improve list readability */
+.prose ul>li, .prose ol>li {
+  color: color-mix(in oklab, var(--color-foreground) 92%, var(--color-background) 8%);
+}
+.dark .prose ul>li, .dark .prose ol>li {
+  color: color-mix(in oklab, var(--color-foreground) 96%, var(--color-background) 4%);
+}
+.prose ul>li::marker {
+  color: color-mix(in oklab, var(--color-accent) 90%, var(--color-foreground) 10%);
+}
+.dark .prose ul>li::marker {
+  color: color-mix(in oklab, var(--color-accent-2) 85%, var(--color-accent) 15%);
+}
+.prose ul, .prose ol {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.prose li+li {
+  margin-top: 0.35rem;
 }
 
 .container-page {
@@ -1330,11 +1363,11 @@ body {
   }
 }
 
-/* Center hero text on desktop */
+/* Center only the homepage hero (not blog posts) */
 @media (min-width: 768px) {
-  .section:first-of-type h1,
-  .section:first-of-type p,
-  .section:first-of-type .cta {
+  .hero h1,
+  .hero p,
+  .hero .cta {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
