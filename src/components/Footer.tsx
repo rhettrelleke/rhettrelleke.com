@@ -11,8 +11,9 @@ export default function Footer() {
           <Link className="hover:text-accent" href="/privacy">Privacy</Link>
           <a className="hover:text-accent" href="mailto:hello@rhettrelleke.com">hello@rhettrelleke.com</a>
         </div>
-        <div className="md:hidden mt-2">
+        <div className="md:hidden mt-2 flex items-center gap-4">
           <ThemeToggle />
+          <Link className="hover:text-accent" href="/contact">Contact</Link>
         </div>
       </div>
     </footer>

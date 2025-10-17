@@ -24,7 +24,7 @@ export default function Navbar() {
         <div className="justify-self-center pr-12 md:pr-0 nav-scroll">
           <ul className="flex items-center gap-3 md:gap-5 text-sm whitespace-nowrap">
             {navItems.map((item) => (
-              <li key={item.href}>
+              <li key={item.href} className={item.href === '/contact' ? 'hidden md:list-item' : undefined}>
                 <Link
                   href={item.href}
                   className={clsx('transition-colors hover-gradient-text')}

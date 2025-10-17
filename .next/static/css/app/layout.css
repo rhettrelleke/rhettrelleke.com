@@ -1968,6 +1968,10 @@ a.link-accent:hover::after {
     display: inline-block;
   }
 
+  .md\:list-item {
+    display: list-item;
+  }
+
   .md\:hidden {
     display: none;
   }
