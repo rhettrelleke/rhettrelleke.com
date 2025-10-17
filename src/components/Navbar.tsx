@@ -22,7 +22,7 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="justify-self-center pr-12 md:pr-0 nav-scroll">
-          <ul className="flex items-center nav-items md:gap-5 text-sm whitespace-nowrap">
+          <ul className="flex items-center gap-3 md:gap-5 text-sm whitespace-nowrap">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
