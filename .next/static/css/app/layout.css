@@ -1259,9 +1259,6 @@ video {
 .justify-between {
   justify-content: space-between;
 }
-.gap-3 {
-  gap: 0.75rem;
-}
 .gap-4 {
   gap: 1rem;
 }
@@ -1284,9 +1281,6 @@ video {
 }
 .overflow-hidden {
   overflow: hidden;
-}
-.overflow-x-auto {
-  overflow-x: auto;
 }
 .whitespace-nowrap {
   white-space: nowrap;
@@ -1579,6 +1573,23 @@ body {
 /* Hide scrollbar for nav overflow */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Mobile-only navbar helpers (iPhone mini safe-area + scroll) */
+@media (max-width: 390px) {
+  .safe-pad {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+  .nav-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* edge fade to hint scrollability */
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 12px, #000 calc(100% - 12px), transparent);
+            mask-image: linear-gradient(to right, transparent, #000 12px, #000 calc(100% - 12px), transparent);
+  }
+  .nav-scroll::-webkit-scrollbar { display: none; }
+  .nav-items { gap: 0.5rem; font-size: clamp(0.9rem, 3.6vw, 1rem); }
+}
 
 /* Animated accent outline chip for headings */
 .accent-outline { position: relative; display: inline-block; padding: 0.18rem 0.6rem; border-radius: 0.5rem; }

@@ -15,14 +15,14 @@ const navItems: { href: string; label: string }[] = [
 export default function Navbar() {
   return (
     <header className="border-b" style={{ borderColor: 'var(--color-border)' }}>
-      <nav className="container-page grid h-16 grid-cols-3 items-center">
+      <nav className="container-page safe-pad grid h-16 grid-cols-3 items-center">
         <div>
           <Link href="/" className="hidden md:inline-block font-semibold tracking-tight hover-gradient-text">
             Rhett Relleke
           </Link>
         </div>
-        <div className="justify-self-center pr-12 md:pr-0 overflow-x-auto no-scrollbar">
-          <ul className="flex items-center gap-3 md:gap-5 text-sm whitespace-nowrap">
+        <div className="justify-self-center pr-12 md:pr-0 nav-scroll">
+          <ul className="flex items-center nav-items md:gap-5 text-sm whitespace-nowrap">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
