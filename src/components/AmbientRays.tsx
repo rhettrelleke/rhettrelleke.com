@@ -49,9 +49,9 @@ export default function AmbientRays() {
       //   jitterPhase: small random phase jitter per ray (radians)
       const bursts = [
         { x: state.w * 0.77, y: state.h * 0.062, rays: 20, baseFactor: 0.07,  maxFactor: 0.22, minPulse: 0.35, lineWidth: 3, shadowBlur: 10, glowAlpha: '0e',
-          speedA: 2.4, speedB: 1.4, phaseA: 0.55, phaseB: 0.18, mix: 0.6, jitterPhase: 1.35 },
+          speedA: 2.6, speedB: 1.4, phaseA: 0.55, phaseB: 0.18, mix: 0.3, jitterPhase: 1.35 },
         { x: state.w * 0.23, y: state.h * 1.05, rays: 20, baseFactor: 0.065, maxFactor: 0.29, minPulse: 0.35, lineWidth: 3, shadowBlur: 10, glowAlpha: '0e',
-          speedA:2.6, speedB: 1.4, phaseA: 0.6,  phaseB: 0.22, mix: 0.7, jitterPhase: 1.4 }
+          speedA:2.8, speedB: 1.4, phaseA: 0.6,  phaseB: 0.22, mix: 0.3, jitterPhase: 1.4 }
       ] as const
 
       // Subtle glow circle
